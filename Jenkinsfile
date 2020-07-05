@@ -3,7 +3,6 @@ pipeline {
   stages {
 
    agent any
-   node("saltstack"){
     stage('Checkout') {
       steps {
         git 'https://github.com/Anthony-Bible/Cluster.git'
@@ -17,7 +16,7 @@ pipeline {
 
       }
      }
-    }
+    
 
   }
   environment {

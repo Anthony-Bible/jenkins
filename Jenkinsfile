@@ -6,7 +6,7 @@ pipeline {
       steps {
         node(label: 'saltstack') {
           git 'https://github.com/Anthony-Bible/Cluster.git'
-          dir(path: './cluster') {
+          dir(path: './registration') {
             git 'https://github.com/Anthony-Bible/Registration.git'
           }
 

@@ -8,15 +8,16 @@ pipeline {
           git 'https://github.com/Anthony-Bible/Registration.git'
         }
 
-      }
-    }
-    stage('Building image') {
-      steps{
         script {
           docker.build registry + ":$BUILD_NUMBER"
         }
+
       }
     }
 
+  }
+  environment {
+    registry = 'mystaticsite-container-prod'
+    registryCredential = 'dockerhub'
   }
 }

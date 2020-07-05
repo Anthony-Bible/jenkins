@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Checkout') {
       steps {
         git 'https://github.com/Anthony-Bible/Cluster.git'
         dir(path: './cluster') {

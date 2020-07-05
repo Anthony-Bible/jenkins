@@ -2,9 +2,9 @@ pipeline {
   agent any
   stages {
 
+   agent any
    node("saltstack"){
     stage('Checkout') {
-      agent any
       steps {
         git 'https://github.com/Anthony-Bible/Cluster.git'
         dir(path: './cluster') {
